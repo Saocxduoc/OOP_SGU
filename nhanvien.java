@@ -1,40 +1,52 @@
 import java.util.Scanner;
-class hanhkhach extends nguoi {
-    private String maHK;
+class nhanvien extends nguoi {
+    private String maNV, chucvu;
     Scanner sc = new Scanner(System.in);
 
 
-    
-    public hanhkhach(){
-        maHK = "";
+    public nhanvien(){
+        maNV = "";
+        chucvu = "";
         hoten = "";
         gioitinh = "";
         diachi = "";
         sdt = "";
     }
-    public hanhkhach(String maHK, String hoten, String gioitinh, String diachi, String sdt){
+    public nhanvien(String maNV, String chucvu, String hoten, String gioitinh, String diachi, String sdt){
         super(hoten,gioitinh,diachi,sdt);
-        this.maHK = maHK;
+        this.maNV = maNV;
+        this.chucvu = chucvu;
     }
 
 
 
     public void nhap(){
-        System.out.println("Nhap ma hanh khach: ");
-        maHK = sc.nextLine();
+        System.out.println("Nhap ma nhan vien: ");
+        maNV = sc.nextLine();
+        System.out.println("Nhap chuc vu: ");
+        chucvu = sc.nextLine();
         super.nhap();
     }
     @Override public void xuat(){
-        System.out.println("hanh khach {" + maHK + ", " + hoten + ", " + gioitinh + ", " + diachi + ", " + sdt +"}");
+        System.out.println("Nhan vien {" + maNV + ", " + chucvu + ", " + hoten + ", " + gioitinh + ", " + diachi + ", " + sdt +"}");
     }
 
 
 
-    public String getmaHK(){
-        return maHK;
+    public String getmaNV(){
+        return maNV;
     }
-    public void setmaHK(String maHK){
-        this.maHK = maHK;
+    public void setmaNV(String maNV){
+        this.maNV = maNV;
+    }
+
+
+
+    public String getchucvu(){
+        return chucvu;
+    }
+    public void setchucvu(String chucvu){
+        this.chucvu = chucvu;
     }
 
 
@@ -65,7 +77,7 @@ class hanhkhach extends nguoi {
     }
 
 
-
+    
     public String getsdt(){
         return sdt;
     }
